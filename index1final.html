@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LegacyLabs Kenya | Premier Media Production & Cultural Storytelling</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- FontAwesome Icons for Social Media & UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        moringa: {
+                            orange: '#F15A24',      // Primary Moringa Orange
+                            deep: '#C43B14',        // Deep Red-Orange Hover
+                            green: '#00A86B',       // Accent Emerald Green
+                            dark: '#0D0F12',        // Primary Dark Charcoal Body Background
+                            slate: '#151821',       // Navbar / Header Container Dark Slate
+                            card: '#1F2432',        // Card Background
+                            modal: '#272E40',       // Modal Dialog Background
+                            border: '#2E364A'       // Border Slate
+                        },
+                        brandSocial: {
+                            instagram: '#E4405F',
+                            youtube: '#FF0000',
+                            whatsapp: '#25D366',
+                            facebook: '#1877F2',
+                            twitter: '#1DA1F2',
+                            tiktok: '#FE2C55'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D0F12;
+            color: #FFFFFF;
+        }
+        
+        .instagram-gradient {
+            background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+        }
+
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 8px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0D0F12;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2E364A;
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: #F15A24;
+        }
+    </style>
+</head>
+<body class="bg-moringa-dark text-white custom-scrollbar selection:bg-moringa-orange selection:text-white">
+
+    <!-- TOP ANNOUNCEMENT BAR -->
+    <div class="bg-moringa-slate border-b border-moringa-border text-xs py-2.5 px-4 text-slate-300">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-location-dot text-moringa-orange"></i> Kilimani, Nairobi, Kenya</span>
+                <span class="hidden md:inline-flex items-center gap-1.5"><i class="fa-solid fa-envelope text-moringa-orange"></i> bookings@legacylabs.co.ke</span>
+                <span class="inline-flex items-center gap-1.5"><i class="fa-solid fa-phone text-moringa-orange"></i> +254 712 345 678</span>
+            </div>
+            
+            <!-- Top Social Handles with Authentic Brand Colors -->
+            <div class="flex items-center gap-3">
+                <a href="https://instagram.com/legacylabs_ke" target="_blank" class="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs hover:scale-110 transition shadow" style="background-color: #E4405F;" title="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://youtube.com/@LegacyLabsMedia" target="_blank" class="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs hover:scale-110 transition shadow" style="background-color: #FF0000;" title="YouTube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                <a href="https://tiktok.com/@legacylabs_media" target="_blank" class="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs hover:scale-110 transition shadow" style="background-color: #000000;" title="TikTok">
+                    <i class="fa-brands fa-tiktok text-white"></i>
+                </a>
+                <a href="https://x.com/LegacyLabsKE" target="_blank" class="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs hover:scale-110 transition shadow" style="background-color: #1DA1F2;" title="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+                <a href="https://facebook.com/LegacyLabsMediaKE" target="_blank" class="w-6 h-6 rounded-full flex items-center justify-center text-white text-xs hover:scale-110 transition shadow" style="background-color: #1877F2;" title="Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://wa.me/254757766669" target="_blank" class="flex items-center gap-1.5 bg-[#25D366] text-white px-2.5 py-0.5 rounded-full font-semibold text-xs hover:bg-emerald-600 transition shadow ml-1">
+                    <i class="fa-brands fa-whatsapp"></i> WhatsApp Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <nav class="sticky top-0 z-40 bg-moringa-dark/95 backdrop-blur border-b border-moringa-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Brand Logo (Moringa Orange + Pure White Contrast) -->
+                <a href="#" class="flex items-center gap-3 group">
+                    <div class="w-12 h-12 rounded-xl bg-moringa-orange flex items-center justify-center text-white font-black text-2xl shadow-lg shadow-moringa-orange/20 group-hover:bg-moringa-deep transition">
+                        L
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black tracking-wider text-white">LEGACY<span class="text-moringa-orange">LABS</span></span>
+                        <span class="block text-[10px] uppercase tracking-widest text-slate-400 font-bold">Media & Cultural Storytelling</span>
+                    </div>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                    <a href="#services" class="hover:text-moringa-orange transition py-2">Services</a>
+                    <a href="#ceremonies" class="hover:text-moringa-orange transition py-2 flex items-center gap-1.5">
+                        Ceremonies <span class="bg-moringa-orange/20 text-moringa-orange text-[10px] px-2 py-0.5 rounded-full font-bold">6 Kenyan Rites</span>
+                    </a>
+                    <a href="#portfolio" class="hover:text-moringa-orange transition py-2">Portfolio</a>
+                    <a href="#equipment" class="hover:text-moringa-orange transition py-2">Equipment</a>
+                    <a href="#calculator" class="hover:text-moringa-orange transition py-2 text-moringa-orange font-bold"><i class="fa-solid fa-calculator mr-1"></i> Cost Estimator</a>
+                    <a href="#contact" class="hover:text-moringa-orange transition py-2">Contact</a>
+                </div>
+
+                <!-- Call to Action Buttons -->
+                <div class="hidden sm:flex items-center space-x-4">
+                    <a href="#calculator" class="bg-moringa-card border border-moringa-border text-white hover:border-moringa-orange hover:text-moringa-orange px-4 py-2.5 rounded-xl font-bold text-sm transition shadow-md">
+                        Get Estimate
+                    </a>
+                    <a href="#booking" class="bg-moringa-orange hover:bg-moringa-deep text-white px-5 py-2.5 rounded-xl font-bold text-sm transition shadow-lg shadow-moringa-orange/20 flex items-center gap-2">
+                        <i class="fa-regular fa-calendar-check"></i> Book Now
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-slate-300 hover:text-white p-2 text-2xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-moringa-card border-b border-moringa-border px-4 pt-2 pb-6 space-y-3">
+            <a href="#services" class="block py-2 text-slate-200 hover:text-moringa-orange font-medium">Services</a>
+            <a href="#ceremonies" class="block py-2 text-moringa-orange font-medium">Cultural Ceremonies (Ruracio, Koito, Enkang, etc.)</a>
+            <a href="#portfolio" class="block py-2 text-slate-200 hover:text-moringa-orange font-medium">Portfolio Gallery</a>
+            <a href="#equipment" class="block py-2 text-slate-200 hover:text-moringa-orange font-medium">Equipment Arsenal</a>
+            <a href="#calculator" class="block py-2 text-moringa-orange font-bold">Cost Estimator Calculator</a>
+            <a href="#contact" class="block py-2 text-slate-200 hover:text-moringa-orange font-medium">Contact & Studio Location</a>
+            <div class="pt-4 flex flex-col gap-2">
+                <a href="#booking" class="w-full bg-moringa-orange text-center text-white py-3 rounded-xl font-bold">Book Media Coverage</a>
+                <a href="https://wa.me/254757766669" target="_blank" class="w-full bg-[#25D366] text-center text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Direct WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative min-h-[85vh] flex items-center justify-center overflow-hidden py-20 bg-gradient-to-b from-moringa-slate via-moringa-dark to-moringa-dark">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#F15A24_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-moringa-orange/20 rounded-full blur-3xl"></div>
+        <div class="absolute -bottom-40 -right-40 w-96 h-96 bg-moringa-deep/20 rounded-full blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-moringa-card border border-moringa-orange/40 text-moringa-orange text-xs font-bold mb-8 uppercase tracking-wider shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-moringa-orange animate-pulse"></span>
+                Preserving Kenya's Cultural Legacies
+            </div>
+
+            <!-- Main Title -->
+            <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight leading-tight mb-6 text-white">
+                Cinema-Grade Media & <br class="hidden sm:inline">
+                <span class="text-moringa-orange">Authentic Cultural Stories</span>
+            </h1>
+
+            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300 font-light mb-10 leading-relaxed">
+                High-definition photography, 4K/8K cinema videography, licensed drone aerials, and respectful coverage for corporate events and traditional Kenyan ceremonies <span class="text-white font-semibold">(Ruracio, Ntheo, Nyombo, Koito, Enkang, Ekuya)</span>.
+            </p>
+
+            <!-- Action Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="#booking" class="w-full sm:w-auto bg-moringa-orange hover:bg-moringa-deep text-white text-base font-bold px-8 py-4 rounded-xl transition shadow-xl shadow-moringa-orange/25 flex items-center justify-center gap-3">
+                    <i class="fa-solid fa-camera"></i> Reserve Production Crew
+                </a>
+                <a href="#calculator" class="w-full sm:w-auto bg-moringa-card hover:bg-moringa-slate text-white border border-moringa-border hover:border-moringa-orange text-base font-semibold px-8 py-4 rounded-xl transition flex items-center justify-center gap-2">
+                    <i class="fa-solid fa-calculator text-moringa-orange"></i> Calculate Instant Estimate
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto border-t border-moringa-border pt-8 text-center">
+                <div class="p-3">
+                    <div class="text-3xl font-extrabold text-moringa-orange">500+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase font-medium">Projects Delivered</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-3xl font-extrabold text-white">220+</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase font-medium">Cultural Ceremonies</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-3xl font-extrabold text-moringa-orange">4K/8K</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase font-medium">Cinema Resolution</div>
+                </div>
+                <div class="p-3">
+                    <div class="text-3xl font-extrabold text-white">100%</div>
+                    <div class="text-xs text-slate-400 mt-1 uppercase font-medium">Client Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="py-24 bg-moringa-slate border-y border-moringa-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-moringa-orange uppercase font-bold text-xs tracking-widest">Full Spectrum Production</span>
+                <h2 class="text-3xl sm:text-5xl font-black mt-2">World-Class Media Services</h2>
+                <p class="text-slate-400 mt-4 text-base">From high-end corporate galas to traditional rites of passage, we deliver flawless visuals tailored to your needs.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-moringa-card border border-moringa-border p-8 rounded-2xl hover:border-moringa-orange transition group">
+                    <div class="w-14 h-14 rounded-xl bg-moringa-orange/10 text-moringa-orange flex items-center justify-center text-2xl mb-6 group-hover:bg-moringa-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cinematography & Film</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">4K multi-cam setups, full lighting rigs, dynamic gimbals, and high-fidelity spatial audio capture for films and events.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-moringa-border pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> Multi-Camera Live Switching</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> Color Grading & Master Audio</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-moringa-card border border-moringa-border p-8 rounded-2xl hover:border-moringa-orange transition group">
+                    <div class="w-14 h-14 rounded-xl bg-moringa-orange/10 text-moringa-orange flex items-center justify-center text-2xl mb-6 group-hover:bg-moringa-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-camera"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Commercial Photography</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">High-resolution editorial, fashion, product, and corporate headshot photography with studio lighting setups.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-moringa-border pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> High-End Retouching Included</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> Rapid Digital Delivery Gallery</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-moringa-card border border-moringa-border p-8 rounded-2xl hover:border-moringa-orange transition group">
+                    <div class="w-14 h-14 rounded-xl bg-moringa-orange/10 text-moringa-orange flex items-center justify-center text-2xl mb-6 group-hover:bg-moringa-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-helicopter"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Drone & Aerial Media</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">KCAA licensed drone operators capturing breathtaking 4K aerial vistas, real estate, and event landscapes.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-moringa-border pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> KCAA Certified Pilots</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> 4K HDR Aerial Videography</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-moringa-card border border-moringa-border p-8 rounded-2xl hover:border-moringa-orange transition group">
+                    <div class="w-14 h-14 rounded-xl bg-moringa-orange/10 text-moringa-orange flex items-center justify-center text-2xl mb-6 group-hover:bg-moringa-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-tower-broadcast"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Live Streaming & Broadcast</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Seamless ultra-low latency live streaming to YouTube, Facebook, Zoom, or private corporate portals.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-moringa-border pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> Cellular Bonding Setup</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> On-Screen Graphics & Lower Thirds</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-moringa-card border border-moringa-border p-8 rounded-2xl hover:border-moringa-orange transition group">
+                    <div class="w-14 h-14 rounded-xl bg-moringa-orange/10 text-moringa-orange flex items-center justify-center text-2xl mb-6 group-hover:bg-moringa-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-film"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Documentaries & Ad Reels</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">End-to-end documentary production, NGO impact stories, corporate promotional reels, and social media ad creation.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-moringa-border pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> Scripting & Storyboarding</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> Voiceover Recording & Mixing</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-moringa-card border border-moringa-border p-8 rounded-2xl hover:border-moringa-orange transition group">
+                    <div class="w-14 h-14 rounded-xl bg-moringa-orange/10 text-moringa-orange flex items-center justify-center text-2xl mb-6 group-hover:bg-moringa-orange group-hover:text-white transition">
+                        <i class="fa-solid fa-compact-disc"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Sound & Field Audio</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">Multi-channel field audio recording, boom operators, wireless lavalier mics, and studio podcast setups.</p>
+                    <ul class="text-xs text-slate-300 space-y-2 border-t border-moringa-border pt-4">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> Sennheiser Wireless Systems</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-moringa-green"></i> Post-Production Sound Master</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPANDED CULTURAL CEREMONIES SECTION -->
+    <section id="ceremonies" class="py-24 bg-moringa-dark relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-start justify-between gap-12 mb-16">
+                <div>
+                    <span class="text-moringa-orange font-bold uppercase text-xs tracking-widest flex items-center gap-2">
+                        <i class="fa-solid fa-heart text-moringa-orange"></i> East African Cultural Custodians
+                    </span>
+                    <h2 class="text-3xl sm:text-5xl font-black mt-2">Traditional Kenyan Ceremonies</h2>
+                    <p class="text-slate-300 mt-4 max-w-2xl text-base">We document traditional rites, negotiations, attire, and blessings across Kenya's diverse communities with honor and cinematic detail.</p>
+                </div>
+                <a href="#booking" class="bg-moringa-orange hover:bg-moringa-deep text-white px-6 py-3.5 rounded-xl font-bold text-sm transition shadow-lg shrink-0">
+                    Book Cultural Production Crew
+                </a>
+            </div>
+
+            <!-- Grid of 6 Key Ceremonies -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 1. Ruracio -->
+                <div class="bg-moringa-card rounded-2xl overflow-hidden border border-moringa-border hover:border-moringa-orange transition flex flex-col justify-between">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80" alt="Ruracio" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-moringa-orange text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Gĩkũyũ Heritage</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Ruracio</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">Capturing bride negotiations, Leso unveiling ceremonies, gift presentations, and elders' blessings with high precision.</p>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-moringa-orange border-t border-moringa-border pt-3 font-medium">
+                            <span><i class="fa-solid fa-video mr-1"></i> Multi-cam + Drone</span>
+                            <span><i class="fa-solid fa-clock mr-1"></i> Full Day Coverage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2. Ntheo -->
+                <div class="bg-moringa-card rounded-2xl overflow-hidden border border-moringa-border hover:border-moringa-orange transition flex flex-col justify-between">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=80" alt="Ntheo" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-moringa-orange text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Akamba Heritage</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Ntheo</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">Documenting sacred Akamba marriage covenant rites, traditional dance performances, and family counsel moments.</p>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-moringa-orange border-t border-moringa-border pt-3 font-medium">
+                            <span><i class="fa-solid fa-microphone mr-1"></i> Crystal Audio</span>
+                            <span><i class="fa-solid fa-book mr-1"></i> Hardcover Album</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. Nyombo -->
+                <div class="bg-moringa-card rounded-2xl overflow-hidden border border-moringa-border hover:border-moringa-orange transition flex flex-col justify-between">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?auto=format&fit=crop&w=600&q=80" alt="Nyombo" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-moringa-orange text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Luo / Gusii / Kuria</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Nyombo</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">Highlighting customary bride wealth rites, Ohangla music processions, family receptions, and vibrant celebrations.</p>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-moringa-orange border-t border-moringa-border pt-3 font-medium">
+                            <span><i class="fa-solid fa-users mr-1"></i> Large Event Crew</span>
+                            <span><i class="fa-solid fa-bolt mr-1"></i> 48hr Express Reel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. Koito -->
+                <div class="bg-moringa-card rounded-2xl overflow-hidden border border-moringa-border hover:border-moringa-orange transition flex flex-col justify-between">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=600&q=80" alt="Koito" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-moringa-orange text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Kalenjin Heritage</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Koito</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">Expressing Kalenjin betrothal rituals, traditional Mursik gourd sharing ceremonies, and counsel of elders.</p>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-moringa-orange border-t border-moringa-border pt-3 font-medium">
+                            <span><i class="fa-solid fa-camera mr-1"></i> 24MP+ Portraits</span>
+                            <span><i class="fa-solid fa-layer-group mr-1"></i> Raw Master Footage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5. Enkang / Enkiama -->
+                <div class="bg-moringa-card rounded-2xl overflow-hidden border border-moringa-border hover:border-moringa-orange transition flex flex-col justify-between">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?auto=format&fit=crop&w=600&q=80" alt="Enkang" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-moringa-orange text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Maa Heritage (Maasai / Samburu)</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Enkang & Enkiama</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">Capturing iconic beadwork attire, traditional jumping songs, parental blessings, and village courtyard celebrations.</p>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-moringa-orange border-t border-moringa-border pt-3 font-medium">
+                            <span><i class="fa-solid fa-helicopter mr-1"></i> Savannah Aerial Drone</span>
+                            <span><i class="fa-solid fa-sun mr-1"></i> Outdoor HDR Color</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 6. Ekuya / Akwar -->
+                <div class="bg-moringa-card rounded-2xl overflow-hidden border border-moringa-border hover:border-moringa-orange transition flex flex-col justify-between">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1489749798305-4fea3ae63d43?auto=format&fit=crop&w=600&q=80" alt="Ekuya" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-moringa-orange text-white text-[10px] font-black px-2.5 py-1 rounded-md uppercase">Turkana & Pastoralist Rites</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Ekuya & Akwar</h3>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">Documenting traditional Turkana betrothals, neckpiece adornment rites, communal feasts, and cultural storytelling.</p>
+                        </div>
+                        <div class="flex items-center justify-between text-xs text-moringa-orange border-t border-moringa-border pt-3 font-medium">
+                            <span><i class="fa-solid fa-film mr-1"></i> Documentary Feature</span>
+                            <span><i class="fa-solid fa-compact-disc mr-1"></i> Audio Archives</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO GALLERY SECTION -->
+    <section id="portfolio" class="py-24 bg-moringa-slate border-t border-moringa-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-moringa-orange uppercase font-bold text-xs tracking-widest">Our Visual Masterpieces</span>
+                <h2 class="text-3xl sm:text-5xl font-black mt-2">Featured Work & Gallery</h2>
+                <p class="text-slate-400 mt-4 text-base">Click any photo to expand into a high-resolution lightbox view.</p>
+            </div>
+
+            <!-- Portfolio Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2 mb-10">
+                <button onclick="filterPortfolio('all')" class="filter-btn active bg-moringa-orange text-white px-5 py-2 rounded-xl text-sm font-semibold transition">All Works</button>
+                <button onclick="filterPortfolio('cultural')" class="filter-btn bg-moringa-card text-slate-300 hover:text-white border border-moringa-border px-5 py-2 rounded-xl text-sm font-semibold transition">Cultural Ceremonies</button>
+                <button onclick="filterPortfolio('commercial')" class="filter-btn bg-moringa-card text-slate-300 hover:text-white border border-moringa-border px-5 py-2 rounded-xl text-sm font-semibold transition">Commercial & Brand</button>
+                <button onclick="filterPortfolio('corporate')" class="filter-btn bg-moringa-card text-slate-300 hover:text-white border border-moringa-border px-5 py-2 rounded-xl text-sm font-semibold transition">Corporate Events</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+                <!-- Item 1 -->
+                <div class="portfolio-item cultural group cursor-pointer relative overflow-hidden rounded-2xl bg-moringa-card border border-moringa-border" onclick="openLightbox('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1200&q=80', 'Ruracio Negotiation Ceremony - Kiambu', 'Cultural Photography')">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Ruracio" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-moringa-dark via-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-moringa-orange font-bold text-xs uppercase tracking-wider">Cultural</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Ruracio Ceremony - Kiambu</h4>
+                        <p class="text-xs text-slate-300 mt-1"><i class="fa-solid fa-magnifying-glass-plus text-moringa-orange mr-1"></i> Click to Enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="portfolio-item commercial group cursor-pointer relative overflow-hidden rounded-2xl bg-moringa-card border border-moringa-border" onclick="openLightbox('https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=1200&q=80', 'Tech Innovation Commercial Shoot', 'Commercial Videography')">
+                    <img src="https://images.unsplash.com/photo-1505373877841-8d25f7d46678?auto=format&fit=crop&w=800&q=80" alt="Commercial Reel" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-moringa-dark via-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-moringa-orange font-bold text-xs uppercase tracking-wider">Commercial</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Tech Summit Commercial - Nairobi</h4>
+                        <p class="text-xs text-slate-300 mt-1"><i class="fa-solid fa-magnifying-glass-plus text-moringa-orange mr-1"></i> Click to Enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="portfolio-item corporate group cursor-pointer relative overflow-hidden rounded-2xl bg-moringa-card border border-moringa-border" onclick="openLightbox('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80', 'East Africa Banking Gala Night', 'Corporate Event')">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="Corporate Gala" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-moringa-dark via-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-moringa-green font-bold text-xs uppercase tracking-wider">Corporate</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Banking Awards Gala - Villa Rosa Kempinski</h4>
+                        <p class="text-xs text-slate-300 mt-1"><i class="fa-solid fa-magnifying-glass-plus text-moringa-orange mr-1"></i> Click to Enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="portfolio-item cultural group cursor-pointer relative overflow-hidden rounded-2xl bg-moringa-card border border-moringa-border" onclick="openLightbox('https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=1200&q=80', 'Koito Traditional Betrothal - Eldoret', 'Cultural Photography')">
+                    <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?auto=format&fit=crop&w=800&q=80" alt="Koito Ceremony" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-moringa-dark via-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-moringa-orange font-bold text-xs uppercase tracking-wider">Cultural</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Koito Betrothal - Eldoret</h4>
+                        <p class="text-xs text-slate-300 mt-1"><i class="fa-solid fa-magnifying-glass-plus text-moringa-orange mr-1"></i> Click to Enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="portfolio-item commercial group cursor-pointer relative overflow-hidden rounded-2xl bg-moringa-card border border-moringa-border" onclick="openLightbox('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80', 'Rift Valley Eco Resort Drone Shoot', 'Drone Videography')">
+                    <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=800&q=80" alt="Drone Shoot" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-moringa-dark via-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-moringa-orange font-bold text-xs uppercase tracking-wider">Commercial</span>
+                        <h4 class="text-lg font-bold text-white mt-1">Resort Drone Feature - Naivasha</h4>
+                        <p class="text-xs text-slate-300 mt-1"><i class="fa-solid fa-magnifying-glass-plus text-moringa-orange mr-1"></i> Click to Enlarge</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="portfolio-item corporate group cursor-pointer relative overflow-hidden rounded-2xl bg-moringa-card border border-moringa-border" onclick="openLightbox('https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=1200&q=80', 'International Development Conference Keynote', 'Live Stream')">
+                    <img src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?auto=format&fit=crop&w=800&q=80" alt="Conference Stream" class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-moringa-dark via-transparent opacity-80 group-hover:opacity-90 transition"></div>
+                    <div class="absolute bottom-0 p-6">
+                        <span class="text-moringa-green font-bold text-xs uppercase tracking-wider">Corporate</span>
+                        <h4 class="text-lg font-bold text-white mt-1">UN-Habitat Conference Stream - Gigiri</h4>
+                        <p class="text-xs text-slate-300 mt-1"><i class="fa-solid fa-magnifying-glass-plus text-moringa-orange mr-1"></i> Click to Enlarge</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/95 hidden flex items-center justify-center p-4 backdrop-blur-md">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl hover:text-moringa-orange transition">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-5xl w-full text-center">
+            <img id="lightbox-img" src="" alt="Expanded View" class="max-h-[80vh] mx-auto rounded-xl border border-moringa-border shadow-2xl">
+            <div class="mt-4">
+                <span id="lightbox-category" class="text-moringa-orange text-xs font-bold uppercase tracking-widest"></span>
+                <h3 id="lightbox-title" class="text-xl font-bold text-white mt-1"></h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- EQUIPMENT SECTION -->
+    <section id="equipment" class="py-24 bg-moringa-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-moringa-orange font-bold uppercase text-xs tracking-widest">Cinema Grade Arsenal</span>
+                <h2 class="text-3xl sm:text-5xl font-black mt-2">Industry-Leading Gear</h2>
+                <p class="text-slate-400 mt-4 text-base">We invest in top-tier broadcast gear to deliver pristine audio and visual quality.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Camera Systems -->
+                <div class="bg-moringa-card border border-moringa-border p-6 rounded-2xl hover:border-moringa-orange transition">
+                    <div class="text-moringa-orange text-2xl mb-4"><i class="fa-solid fa-camera"></i></div>
+                    <h4 class="font-bold text-lg text-white mb-3">Cameras & Bodies</h4>
+                    <ul class="text-xs text-slate-300 space-y-2">
+                        <li>• Sony FX6 Cinema Cameras</li>
+                        <li>• Sony A7S III 4K 120fps</li>
+                        <li>• Blackmagic Pocket 6K Pro</li>
+                        <li>• RED Komodo 6K Rig</li>
+                    </ul>
+                </div>
+
+                <!-- Lenses & Optics -->
+                <div class="bg-moringa-card border border-moringa-border p-6 rounded-2xl hover:border-moringa-orange transition">
+                    <div class="text-moringa-orange text-2xl mb-4"><i class="fa-solid fa-circle-dot"></i></div>
+                    <h4 class="font-bold text-lg text-white mb-3">Lenses & Optics</h4>
+                    <ul class="text-xs text-slate-300 space-y-2">
+                        <li>• Sony G-Master 24-70mm f/2.8 II</li>
+                        <li>• Sony G-Master 70-200mm f/2.8</li>
+                        <li>• Sigma Art Cinema Prime Sets</li>
+                        <li>• Anamorphic Lens Adapters</li>
+                    </ul>
+                </div>
+
+                <!-- Lighting & Grip -->
+                <div class="bg-moringa-card border border-moringa-border p-6 rounded-2xl hover:border-moringa-orange transition">
+                    <div class="text-moringa-green text-2xl mb-4"><i class="fa-solid fa-lightbulb"></i></div>
+                    <h4 class="font-bold text-lg text-white mb-3">Lighting & Grip</h4>
+                    <ul class="text-xs text-slate-300 space-y-2">
+                        <li>• Aputure 600d Pro LED Lights</li>
+                        <li>• Nanlite Pavotube II RGBWW</li>
+                        <li>• DJI RS3 Pro Gimbals</li>
+                        <li>• C-Stands & Softbox Grids</li>
+                    </ul>
+                </div>
+
+                <!-- Audio & Drones -->
+                <div class="bg-moringa-card border border-moringa-border p-6 rounded-2xl hover:border-moringa-orange transition">
+                    <div class="text-moringa-orange text-2xl mb-4"><i class="fa-solid fa-plane"></i></div>
+                    <h4 class="font-bold text-lg text-white mb-3">Audio & Drone Fleet</h4>
+                    <ul class="text-xs text-slate-300 space-y-2">
+                        <li>• DJI Mavic 3 Cine 4K Drone</li>
+                        <li>• Sennheiser MKH416 Shotgun Mics</li>
+                        <li>• DJI MIC 2 Wireless Systems</li>
+                        <li>• Zoom F8n Pro Field Recorder</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COST ESTIMATOR CALCULATOR -->
+    <section id="calculator" class="py-24 bg-moringa-slate border-y border-moringa-border">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-moringa-orange font-bold uppercase text-xs tracking-widest">Instant Transparency</span>
+                <h2 class="text-3xl sm:text-5xl font-black mt-2">Interactive Cost Estimator</h2>
+                <p class="text-slate-400 mt-4 text-base">Select options to calculate an instant estimated package cost in KES.</p>
+            </div>
+
+            <div class="bg-moringa-card border border-moringa-border rounded-3xl p-6 sm:p-10 shadow-2xl">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Calculator Inputs -->
+                    <div class="space-y-6">
+                        <!-- Event Type Selection -->
+                        <div>
+                            <label class="block text-xs font-bold text-moringa-orange uppercase tracking-wider mb-2">1. Event Category</label>
+                            <select id="calc-category" onchange="calculateCost()" class="w-full bg-moringa-dark border border-moringa-border rounded-xl px-4 py-3 text-white text-sm focus:border-moringa-orange focus:outline-none">
+                                <option value="cultural" data-base="65000">Cultural Rites (Ruracio, Koito, Ntheo, Nyombo, Enkang)</option>
+                                <option value="wedding" data-base="85000">White Wedding & Reception</option>
+                                <option value="corporate" data-base="95000">Corporate Conference & Gala</option>
+                                <option value="commercial" data-base="120000">Commercial Brand Advert / Shoot</option>
+                            </select>
+                        </div>
+
+                        <!-- Duration -->
+                        <div>
+                            <label class="block text-xs font-bold text-moringa-orange uppercase tracking-wider mb-2">2. Coverage Duration</label>
+                            <select id="calc-duration" onchange="calculateCost()" class="w-full bg-moringa-dark border border-moringa-border rounded-xl px-4 py-3 text-white text-sm focus:border-moringa-orange focus:outline-none">
+                                <option value="1" data-multiplier="1.0">Half Day (Up to 5 Hours)</option>
+                                <option value="2" data-multiplier="1.6">Full Day (Up to 10 Hours)</option>
+                                <option value="3" data-multiplier="2.8">Multi-Day Coverage (2 Full Days)</option>
+                            </select>
+                        </div>
+
+                        <!-- Add-on Options -->
+                        <div>
+                            <label class="block text-xs font-bold text-moringa-orange uppercase tracking-wider mb-3">3. Production Add-Ons</label>
+                            <div class="space-y-3 text-sm">
+                                <label class="flex items-center justify-between bg-moringa-dark p-3 rounded-xl border border-moringa-border cursor-pointer hover:border-moringa-orange">
+                                    <span class="flex items-center gap-2"><input type="checkbox" id="add-drone" onchange="calculateCost()" value="25000" class="accent-moringa-orange w-4 h-4"> 4K Drone Aerial Coverage</span>
+                                    <span class="text-xs text-moringa-orange font-bold">+KES 25,000</span>
+                                </label>
+                                <label class="flex items-center justify-between bg-moringa-dark p-3 rounded-xl border border-moringa-border cursor-pointer hover:border-moringa-orange">
+                                    <span class="flex items-center gap-2"><input type="checkbox" id="add-livestream" onchange="calculateCost()" value="35000" class="accent-moringa-orange w-4 h-4"> Live HD Streaming Setup</span>
+                                    <span class="text-xs text-moringa-orange font-bold">+KES 35,000</span>
+                                </label>
+                                <label class="flex items-center justify-between bg-moringa-dark p-3 rounded-xl border border-moringa-border cursor-pointer hover:border-moringa-orange">
+                                    <span class="flex items-center gap-2"><input type="checkbox" id="add-photobook" onchange="calculateCost()" value="20000" class="accent-moringa-orange w-4 h-4"> Hardcover Photo Album</span>
+                                    <span class="text-xs text-moringa-orange font-bold">+KES 20,000</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Summary & Result -->
+                    <div class="bg-moringa-dark rounded-2xl p-6 border border-moringa-border flex flex-col justify-between">
+                        <div>
+                            <h4 class="text-lg font-bold text-white mb-4 border-b border-moringa-border pb-3">Estimated Investment Summary</h4>
+                            <div class="space-y-3 text-xs text-slate-300">
+                                <div class="flex justify-between"><span>Base Coverage Rate:</span> <span id="summary-base" class="font-bold text-white">KES 65,000</span></div>
+                                <div class="flex justify-between"><span>Duration Factor:</span> <span id="summary-duration" class="font-bold text-white">1.0x</span></div>
+                                <div class="flex justify-between"><span>Add-Ons Total:</span> <span id="summary-addons" class="font-bold text-moringa-orange">KES 0</span></div>
+                                <div class="flex justify-between text-moringa-green"><span>Taxes & Gear Included:</span> <span class="font-bold">YES</span></div>
+                            </div>
+                        </div>
+
+                        <div class="mt-8 pt-6 border-t border-moringa-border text-center">
+                            <span class="text-xs uppercase tracking-widest text-slate-400 font-bold block mb-1">Estimated Total Price</span>
+                            <div id="calc-total" class="text-4xl font-black text-moringa-orange mb-6">KES 65,000</div>
+                            <button onclick="applyEstimateToBooking()" class="w-full bg-moringa-orange hover:bg-moringa-deep text-white py-3.5 rounded-xl font-bold transition flex items-center justify-center gap-2 shadow-lg shadow-moringa-orange/20">
+                                Apply Estimate to Booking <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BOOKING SECTION -->
+    <section id="booking" class="py-24 bg-moringa-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-moringa-orange font-bold uppercase text-xs tracking-widest">Reserve Your Production Date</span>
+                <h2 class="text-3xl sm:text-5xl font-black mt-2">Book LegacyLabs Media Crew</h2>
+                <p class="text-slate-400 mt-4 text-base">Fill in your details below to generate a direct WhatsApp booking payload or email inquiry.</p>
+            </div>
+
+            <form id="booking-form" onsubmit="handleBookingSubmit(event)" class="bg-moringa-card border border-moringa-border p-8 rounded-3xl space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Your Full Name *</label>
+                        <input type="text" id="book-name" required placeholder="e.g. Wanjiku Kamau" class="w-full bg-moringa-dark border border-moringa-border rounded-xl px-4 py-3 text-white text-sm focus:border-moringa-orange focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Phone Number *</label>
+                        <input type="tel" id="book-phone" required placeholder="+254 7XX XXX XXX" class="w-full bg-moringa-dark border border-moringa-border rounded-xl px-4 py-3 text-white text-sm focus:border-moringa-orange focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Event Date *</label>
+                        <input type="date" id="book-date" required class="w-full bg-moringa-dark border border-moringa-border rounded-xl px-4 py-3 text-white text-sm focus:border-moringa-orange focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Event Type / Ceremony *</label>
+                        <select id="book-type" class="w-full bg-moringa-dark border border-moringa-border rounded-xl px-4 py-3 text-white text-sm focus:border-moringa-orange focus:outline-none">
+                            <option value="Ruracio Ceremony">Ruracio (Gĩkũyũ Traditional)</option>
+                            <option value="Koito Ceremony">Koito (Kalenjin Traditional)</option>
+                            <option value="Ntheo Ceremony">Ntheo (Akamba Traditional)</option>
+                            <option value="Nyombo Ceremony">Nyombo (Luo / Gusii / Kuria)</option>
+                            <option value="Enkang Ceremony">Enkang / Enkiama (Maasai / Samburu)</option>
+                            <option value="Ekuya Ceremony">Ekuya / Akwar (Turkana / Pastoralist)</option>
+                            <option value="White Wedding">White Wedding & Reception</option>
+                            <option value="Corporate Event">Corporate Gala / Conference</option>
+                            <option value="Commercial Shoot">Commercial Advert Shoot</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Location / Venue *</label>
+                    <input type="text" id="book-location" required placeholder="e.g. Naivasha Resort / Kilimani, Nairobi" class="w-full bg-moringa-dark border border-moringa-border rounded-xl px-4 py-3 text-white text-sm focus:border-moringa-orange focus:outline-none">
+                </div>
+
+                <div>
+                    <label class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Additional Specific Requirements</label>
+                    <textarea id="book-notes" rows="4" placeholder="Mention drone preference, live streaming requirements, expected number of guests..." class="w-full bg-moringa-dark border border-moringa-border rounded-xl px-4 py-3 text-white text-sm focus:border-moringa-orange focus:outline-none"></textarea>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <button type="submit" class="flex-1 bg-[#25D366] hover:bg-emerald-600 text-white font-bold py-4 rounded-xl transition flex items-center justify-center gap-2 shadow-lg">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Send via WhatsApp Direct
+                    </button>
+                    <button type="button" onclick="sendEmailBooking()" class="flex-1 bg-moringa-orange hover:bg-moringa-deep text-white font-bold py-4 rounded-xl transition flex items-center justify-center gap-2 shadow-lg">
+                        <i class="fa-solid fa-envelope"></i> Send via Email Quote
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- CONTACT & FOOTER SECTION -->
+    <section id="contact" class="py-24 bg-moringa-slate border-t border-moringa-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Contact Details & Social Handles -->
+                <div class="space-y-8">
+                    <div>
+                        <span class="text-moringa-orange font-bold uppercase text-xs tracking-widest">Connect With Us</span>
+                        <h2 class="text-3xl sm:text-4xl font-black mt-2">Get In Touch Directly</h2>
+                        <p class="text-slate-400 mt-3 text-sm">Visit our studio in Nairobi or reach out through our official social media handles.</p>
+                    </div>
+
+                    <div class="space-y-4 text-sm">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-moringa-card border border-moringa-border">
+                            <div class="w-10 h-10 rounded-lg bg-moringa-orange/10 text-moringa-orange flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white">Studio Headquarters</h5>
+                                <p class="text-slate-300 text-xs mt-0.5">LegacyLabs Center, Woodvale Lane, Kilimani, Nairobi, Kenya</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-moringa-card border border-moringa-border">
+                            <div class="w-10 h-10 rounded-lg bg-moringa-orange/10 text-moringa-orange flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white">Direct Phone & WhatsApp</h5>
+                                <p class="text-slate-300 text-xs mt-0.5">+254 757766669 / +254 707377675</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-moringa-card border border-moringa-border">
+                            <div class="w-10 h-10 rounded-lg bg-moringa-green/10 text-moringa-green flex items-center justify-center text-lg shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white">Official Email Address</h5>
+                                <p class="text-slate-300 text-xs mt-0.5">bookings@legacylabs.co.ke / info@legacylabs.co.ke</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Media Handles with Authentic Colors -->
+                    <div>
+                        <h5 class="text-xs font-bold uppercase tracking-wider text-moringa-orange mb-3">Official Social Media Platforms</h5>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://instagram.com/legacylabs_ke" target="_blank" class="flex items-center gap-2 bg-moringa-card border border-moringa-border px-4 py-2.5 rounded-xl text-xs hover:border-moringa-orange transition">
+                                <i class="fa-brands fa-instagram text-[#E4405F] text-base"></i> <span class="text-white font-medium">@legacylabs_ke</span>
+                            </a>
+                            <a href="https://youtube.com/@LegacyLabsMedia" target="_blank" class="flex items-center gap-2 bg-moringa-card border border-moringa-border px-4 py-2.5 rounded-xl text-xs hover:border-moringa-orange transition">
+                                <i class="fa-brands fa-youtube text-[#FF0000] text-base"></i> <span class="text-white font-medium">@LegacyLabsMedia</span>
+                            </a>
+                            <a href="https://tiktok.com/@legacylabs_media" target="_blank" class="flex items-center gap-2 bg-moringa-card border border-moringa-border px-4 py-2.5 rounded-xl text-xs hover:border-moringa-orange transition">
+                                <i class="fa-brands fa-tiktok text-white text-base"></i> <span class="text-white font-medium">@legacylabs_media</span>
+                            </a>
+                            <a href="https://x.com/LegacyLabsKE" target="_blank" class="flex items-center gap-2 bg-moringa-card border border-moringa-border px-4 py-2.5 rounded-xl text-xs hover:border-moringa-orange transition">
+                                <i class="fa-brands fa-x-twitter text-[#1DA1F2] text-base"></i> <span class="text-white font-medium">@LegacyLabsKE</span>
+                            </a>
+                            <a href="https://facebook.com/LegacyLabsMediaKE" target="_blank" class="flex items-center gap-2 bg-moringa-card border border-moringa-border px-4 py-2.5 rounded-xl text-xs hover:border-moringa-orange transition">
+                                <i class="fa-brands fa-facebook text-[#1877F2] text-base"></i> <span class="text-white font-medium">LegacyLabs Media</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Location Map Box -->
+                <div class="bg-moringa-card border border-moringa-border p-4 rounded-3xl flex flex-col justify-between min-h-[350px] relative overflow-hidden">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.277443128163!2d36.7822!3d-1.2884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f109c13b2e3e9%3A0x63390c5061e389e8!2sKilimani%2C%20Nairobi!5e0!3m2!1sen!2ske!4v1700000000000!5m2!1sen!2ske" width="100%" height="100%" style="border:0; min-height: 320px;" allowfullscreen="" loading="lazy" class="rounded-2xl"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-moringa-dark border-t border-moringa-border py-12 text-slate-400 text-xs">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 border-b border-moringa-border pb-8">
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-lg bg-moringa-orange flex items-center justify-center text-white font-black text-xl">L</div>
+                    <div>
+                        <span class="text-lg font-black text-white tracking-wider">LEGACY<span class="text-moringa-orange">LABS</span></span>
+                        <p class="text-[10px] text-slate-400 font-semibold uppercase">Media Production & Cultural Films</p>
+                    </div>
+                </div>
+
+                <!-- Footer Social Handles with Authentic Colors -->
+                <div class="flex items-center gap-3">
+                    <a href="https://instagram.com/legacylabs_ke" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white hover:scale-110 transition shadow" style="background-color: #E4405F;" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://youtube.com/@LegacyLabsMedia" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white hover:scale-110 transition shadow" style="background-color: #FF0000;" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                    <a href="https://tiktok.com/@legacylabs_media" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white hover:scale-110 transition shadow" style="background-color: #000000;" title="TikTok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <a href="https://x.com/LegacyLabsKE" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white hover:scale-110 transition shadow" style="background-color: #1DA1F2;" title="X (Twitter)">
+                        <i class="fa-brands fa-x-twitter"></i>
+                    </a>
+                    <a href="https://facebook.com/LegacyLabsMediaKE" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white hover:scale-110 transition shadow" style="background-color: #1877F2;" title="Facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/254757766669" target="_blank" class="w-8 h-8 rounded-full flex items-center justify-center text-white hover:scale-110 transition shadow" style="background-color: #25D366;" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                <p>&copy; 2026 LegacyLabs Kenya. All Rights Reserved. Styled strictly with Moringa School Palette.</p>
+                <div class="flex gap-6">
+                    <a href="#services" class="hover:text-white transition">Services</a>
+                    <a href="#ceremonies" class="hover:text-white transition">Ceremonies</a>
+                    <a href="#calculator" class="hover:text-white transition">Cost Calculator</a>
+                    <a href="#booking" class="hover:text-white transition">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT INTERACTION LOGIC -->
+    <script>
+        // Mobile Navigation Menu Toggle
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Category Filter Logic
+        function filterPortfolio(category) {
+            const items = document.querySelectorAll('.portfolio-item');
+            const btns = document.querySelectorAll('.filter-btn');
+
+            btns.forEach(btn => {
+                btn.classList.remove('bg-moringa-orange', 'text-white');
+                btn.classList.add('bg-moringa-card', 'text-slate-300');
+            });
+
+            event.target.classList.remove('bg-moringa-card', 'text-slate-300');
+            event.target.classList.add('bg-moringa-orange', 'text-white');
+
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox Modal Functions
+        function openLightbox(imgUrl, title, category) {
+            document.getElementById('lightbox-img').src = imgUrl;
+            document.getElementById('lightbox-title').innerText = title;
+            document.getElementById('lightbox-category').innerText = category;
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Cost Estimator Calculation Logic
+        function calculateCost() {
+            const categorySelect = document.getElementById('calc-category');
+            const durationSelect = document.getElementById('calc-duration');
+
+            const baseCost = parseInt(categorySelect.options[categorySelect.selectedIndex].getAttribute('data-base'));
+            const multiplier = parseFloat(durationSelect.options[durationSelect.selectedIndex].getAttribute('data-multiplier'));
+
+            let addOnsCost = 0;
+            if (document.getElementById('add-drone').checked) addOnsCost += parseInt(document.getElementById('add-drone').value);
+            if (document.getElementById('add-livestream').checked) addOnsCost += parseInt(document.getElementById('add-livestream').value);
+            if (document.getElementById('add-photobook').checked) addOnsCost += parseInt(document.getElementById('add-photobook').value);
+
+            const total = Math.round((baseCost * multiplier) + addOnsCost);
+
+            document.getElementById('summary-base').innerText = `KES ${baseCost.toLocaleString()}`;
+            document.getElementById('summary-duration').innerText = `${multiplier}x`;
+            document.getElementById('summary-addons').innerText = `KES ${addOnsCost.toLocaleString()}`;
+            document.getElementById('calc-total').innerText = `KES ${total.toLocaleString()}`;
+        }
+
+        function applyEstimateToBooking() {
+            const categoryText = document.getElementById('calc-category').options[document.getElementById('calc-category').selectedIndex].text;
+            const totalText = document.getElementById('calc-total').innerText;
+            
+            document.getElementById('book-notes').value = `Applied Estimate: ${categoryText} | Total Estimated Cost: ${totalText}`;
+            document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Booking Dispatch Functions
+        function handleBookingSubmit(e) {
+            e.preventDefault();
+            const name = document.getElementById('book-name').value;
+            const phone = document.getElementById('book-phone').value;
+            const date = document.getElementById('book-date').value;
+            const type = document.getElementById('book-type').value;
+            const location = document.getElementById('book-location').value;
+            const notes = document.getElementById('book-notes').value;
+
+            const text = `Hello LegacyLabs Kenya! I would like to book media coverage:%0A%0A*Name:* ${name}%0A*Phone:* ${phone}%0A*Event Type:* ${type}%0A*Date:* ${date}%0A*Location:* ${location}%0A*Notes:* ${notes}`;
+            window.open(`https://wa.me/254712345678?text=${text}`, '_blank');
+        }
+
+        function sendEmailBooking() {
+            const name = document.getElementById('book-name').value;
+            const phone = document.getElementById('book-phone').value;
+            const date = document.getElementById('book-date').value;
+            const type = document.getElementById('book-type').value;
+            const location = document.getElementById('book-location').value;
+            const notes = document.getElementById('book-notes').value;
+
+            if(!name || !phone) {
+                alert('Please fill in your name and phone number before submitting.');
+                return;
+            }
+
+            const subject = encodeURIComponent(`Media Booking Inquiry - ${name}`);
+            const body = encodeURIComponent(`LegacyLabs Inquiry Details:\n\nName: ${name}\nPhone: ${phone}\nEvent Type: ${type}\nDate: ${date}\nLocation: ${location}\nNotes: ${notes}`);
+            window.location.href = `mailto:bookings@legacylabs.co.ke?subject=${subject}&body=${body}`;
+        }
+    </script>
+</body>
+</html>
